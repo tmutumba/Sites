@@ -8,4 +8,3 @@ class Subject < ApplicationRecord
 	scope :newest_first, lambda{ order("subjects.created_at DESC" )}
 	scope :search, lambda {|query| where(["name LIKE ?", "%#{query}%"])}
 end
-
